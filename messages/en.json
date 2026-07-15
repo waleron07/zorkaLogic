@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "services": "Solutions",
+    "cases": "Cases",
+    "about": "About",
+    "process": "Process",
+    "contact": "Contact",
+    "cta": "Start a project"
+  },
+  "hero": {
+    "badge": "AI Studio · from MVP to production",
+    "title": "Intelligent software <grad>solutions</grad> for business",
+    "subtitle": "We design and ship AI products, web platforms and mobile apps — from a fast MVP to deployment, scaling and support.",
+    "ctaPrimary": "Start a project",
+    "ctaSecondary": "Our solutions"
+  },
+  "services": {
+    "title": "Solutions",
+    "subtitle": "Not a tech list — products for your task. See the stack in our cases.",
+    "loading": "Loading…",
+    "error": "Failed to load"
+  },
+  "cases": {
+    "title": "Case studies",
+    "subtitle": "What we build and the results we achieve. Clients stay confidential — only the task, the metric and the stack.",
+    "viewAll": "All cases",
+    "loading": "Loading cases…",
+    "error": "Failed to load cases",
+    "pageTitle": "Case studies — AI/ML and development results | ZorkaLogic",
+    "pageDescription": "Real project results by ZorkaLogic: speech detection, computer vision, demand forecasting, OCR, anomaly detection. Accuracy metrics and the stack used.",
+    "pageHeading": "Our case studies",
+    "pageIntro": "Task → result. What we solved and with which metrics, without disclosing clients."
+  },
+  "about": {
+    "title": "Why ZorkaLogic",
+    "subtitle": "An engineering team that owns the whole project — from idea to support.",
+    "features": {
+      "fullstack": {
+        "title": "End-to-end fullstack team",
+        "description": "ML, Data Science, Backend, Frontend, Embedded and mobile in one team — projects of any complexity."
+      },
+      "ai": {
+        "title": "Deep AI expertise",
+        "description": "Computer Vision, speech processing, time-series analytics, MLOps and Edge AI — not just a web studio."
+      },
+      "lifecycle": {
+        "title": "Support across every stage",
+        "description": "Research, architecture, development, model training, deployment and technical support."
+      },
+      "integrations": {
+        "title": "Integrations with your systems",
+        "description": "1C, ERP, CRM, payment systems, Telegram, cloud services and external APIs."
+      }
+    }
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "A transparent process from research to support.",
+    "steps": {
+      "research": { "title": "Research", "description": "We dive into the problem, analyze data and requirements." },
+      "architecture": { "title": "Architecture", "description": "We design a scalable and reliable solution." },
+      "development": { "title": "Development", "description": "We build the code, services and interfaces." },
+      "training": { "title": "Model training", "description": "We prepare data, train and optimize ML models." },
+      "deployment": { "title": "Deployment", "description": "We ship to production and integrate with your systems." },
+      "support": { "title": "Support", "description": "We maintain, monitor and evolve the product." }
+    }
+  },
+  "form": {
+    "title": "Let's discuss your project",
+    "subtitle": "Send a request — we'll reply within one business day.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "message": "Tell us about your task",
+    "consent": "I agree to the processing of my personal data",
+    "privacyLink": "Privacy Policy",
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "successTitle": "Request sent!",
+    "successText": "Thank you, we'll get in touch shortly.",
+    "errorText": "Failed to send the request. Please try again.",
+    "errors": {
+      "name": "Enter your name",
+      "email": "Enter a valid email",
+      "message": "Describe your task (at least 10 characters)",
+      "consent": "Consent to data processing is required"
+    }
+  },
+  "footer": {
+    "tagline": "Intelligent software solutions for business.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy"
+  }
+}

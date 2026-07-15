@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/*
+  ZorkaLogic — дизайн-токены.
+  Лендинг тёмный по концепции (tech / минимализм), поэтому цвета
+  зафиксированы, без переключения на светлую тему.
+*/
+:root {
+  /* Elevated Dark: дымчато-синяя база вместо чистого чёрного — без мрачности */
+  --bg: #0f0f18;
+  --bg-2: #0c0c14;
+  --surface: #181826;
+  --surface-2: #1f1f30;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --fg: #edecf6;
+  --muted: #a9a9bd; /* ярче тусклого серого — больше «жизни» */
+  --accent: #7c5cff; /* фирменный сине-фиолетовый (из логотипа) */
+  --accent-600: #6d5ef8;
+  --accent-2: #43e0cf; /* второй акцент — изумруд, оживляет */
+  --accent-glow: rgba(124, 92, 255, 0.35);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-600: var(--accent-600);
+  --color-accent-2: var(--accent-2);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Уважаем системную настройку «уменьшить движение» */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Видимый фокус для доступности */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Утилита: мягкое радиальное свечение акцентом */
+.accent-glow {
+  background: radial-gradient(
+    60% 60% at 50% 40%,
+    var(--accent-glow) 0%,
+    transparent 70%
+  );
+}
+
+/* Аврора для hero: живое многоцветное свечение (фиолет + изумруд + намёк магенты) */
+.aurora {
+  background:
+    radial-gradient(38% 46% at 22% 10%, rgba(124, 92, 255, 0.4), transparent 66%),
+    radial-gradient(34% 42% at 82% 4%, rgba(67, 224, 207, 0.24), transparent 64%),
+    radial-gradient(30% 40% at 58% 40%, rgba(214, 72, 180, 0.13), transparent 70%);
+  animation: zl-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes zl-drift {
+  from {
+    transform: translate3d(-1.5%, 0, 0);
+  }
+  to {
+    transform: translate3d(1.5%, 1.6%, 0) scale(1.06);
+  }
+}
+
+/* Градиентное слово в заголовке: violet → emerald */
+.text-gradient {
+  background: linear-gradient(96deg, #a78bff 0%, var(--accent-2) 88%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/*
+  Появление на первом экране через CSS (а не Framer Motion):
+  контент виден без JS/до гидрации — лучше для SEO и восприятия скорости.
+*/
+@keyframes zl-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation: zl-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
